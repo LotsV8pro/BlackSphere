@@ -1,24 +1,27 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif; /* Define la fuente para todo el cuerpo del documento */
+    margin: 0; /* Elimina el margen exterior del cuerpo */
+    padding: 0; /* Elimina el relleno del cuerpo */
 }
+
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto en el encabezado */
+    padding: 20px 0; /* Espaciado interno del encabezado (20px arriba y abajo, 0 a los lados) */
+    text-align: center; /* Alineación del texto en el centro */
 }
+
 .content {
-    padding: 20px;
-    text-align: center;
+    padding: 20px; /* Espaciado interno del contenido (20px en todos los lados) */
+    text-align: center; /* Alineación del texto en el centro */
 }
+
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    background-color: #333; /* Color de fondo del pie de página */
+    color: #fff; /* Color del texto en el pie de página */
+    text-align: center; /* Alineación del texto en el centro */
+    padding: 20px 0; /* Espaciado interno del pie de página (20px arriba y abajo, 0 a los lados) */
+    position: fixed; /* Fija el pie de página en la parte inferior de la ventana del navegador */
+    bottom: 0; /* Establece la posición del pie de página en la parte inferior de la ventana */
+    width: 100%; /* Establece el ancho del pie de página al 100% del ancho de la ventana */
 }

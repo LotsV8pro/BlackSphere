@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Solicitud de Servidor</title>
-    <link rel="stylesheet" href="/Blacksphere/CSS/CSS-FORM.css"> 
-    <link rel="icon" href="./Blacksphere/Logo/Logo.webp" type="image/x-icon">
+    <meta charset="UTF-8"> <!-- Configura la codificación de caracteres del documento -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la escala inicial para dispositivos móviles -->
+    <title>Formulario de Solicitud de Servidor</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="/Blacksphere/CSS/CSS-FORM.css"> <!-- Enlace al archivo CSS externo para estilos del formulario -->
+    <link rel="icon" href="./Blacksphere/Logo/Logo.webp" type="image/x-icon"> <!-- Icono de la pestaña del navegador -->
     <!-- Logo telf -->
-    <link rel="apple-touch-icon" href="./Blacksphere/Logo/Logo.webp">
+    <link rel="apple-touch-icon" href="./Blacksphere/Logo/Logo.webp"> <!-- Icono para dispositivos móviles -->
 </head>
 <body>
     <header>
-        <h1>Formulario de Solicitud de Servidor</h1>
+        <h1>Formulario de Solicitud de Servidor</h1> <!-- Título principal del formulario -->
     </header>
     <div class="container">
         <form action="mailto:contact.blacksphere@gmail.com" method="post" enctype="text/plain">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required><br><br>
+            <!-- Formulario de solicitud -->
+            <label for="nombre">Nombre:</label> <!-- Etiqueta para el campo de nombre -->
+            <input type="text" id="nombre" name="nombre" required><br><br> <!-- Campo de entrada para el nombre -->
             
-            <label for="apellidos">Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" required><br><br>
+            <label for="apellidos">Apellidos:</label> <!-- Etiqueta para el campo de apellidos -->
+            <input type="text" id="apellidos" name="apellidos" required><br><br> <!-- Campo de entrada para los apellidos -->
             
-            <label for="correo">Correo:</label>
-            <input type="email" id="correo" name="correo" required><br><br>
+            <label for="correo">Correo:</label> <!-- Etiqueta para el campo de correo electrónico -->
+            <input type="email" id="correo" name="correo" required><br><br> <!-- Campo de entrada para el correo electrónico -->
             
-            <label for="discord">Nombre de Discord:</label>
-            <input type="text" id="discord" name="discord" required><br><br>
+            <label for="discord">Nombre de Discord:</label> <!-- Etiqueta para el campo del nombre de Discord -->
+            <input type="text" id="discord" name="discord" required><br><br> <!-- Campo de entrada para el nombre de Discord -->
             
-            <label for="tipo_servidor">Tipo de Servidor:</label>
-            <select id="tipo_servidor" name="tipo_servidor">
-                <option value="rework">Rework de Servidor</option>
-                <option value="nuevo">Servidor Nuevo</option>
+            <label for="tipo_servidor">Tipo de Servidor:</label> <!-- Etiqueta para el campo del tipo de servidor -->
+            <select id="tipo_servidor" name="tipo_servidor"> <!-- Menú desplegable para seleccionar el tipo de servidor -->
+                <option value="rework">Rework de Servidor</option> <!-- Opción para rework de servidor -->
+                <option value="nuevo">Servidor Nuevo</option> <!-- Opción para servidor nuevo -->
             </select><br><br>
             
-            <label for="categoria_servidor">Categoría de Servidor:</label>
-            <select id="categoria_servidor" name="categoria_servidor">
-                <option value="streamer">Servidor para Streamer</option>
-                <option value="comunidad">Servidor para Comunidad</option>
-                <option value="otro">Otro</option>
+            <label for="categoria_servidor">Categoría de Servidor:</label> <!-- Etiqueta para el campo de categoría de servidor -->
+            <select id="categoria_servidor" name="categoria_servidor"> <!-- Menú desplegable para seleccionar la categoría de servidor -->
+                <option value="streamer">Servidor para Streamer</option> <!-- Opción para servidor de streamer -->
+                <option value="comunidad">Servidor para Comunidad</option> <!-- Opción para servidor de comunidad -->
+                <option value="otro">Otro</option> <!-- Opción para otro tipo de servidor -->
             </select><br><br>
             
-            <label for="especificaciones">Especificaciones:</label><br>
-            <textarea id="especificaciones" name="especificaciones" rows="4" cols="50"></textarea><br><br>
+            <label for="especificaciones">Especificaciones:</label><br> <!-- Etiqueta para el campo de especificaciones -->
+            <textarea id="especificaciones" name="especificaciones" rows="4" cols="50"></textarea><br><br> <!-- Área de texto para las especificaciones -->
             
-            <input type="submit" value="Enviar">
+            <input type="submit" value="Enviar"> <!-- Botón de envío del formulario -->
         </form>
     </div>
 </body>
