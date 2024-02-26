@@ -109,3 +109,67 @@ nav ul li a {
     text-decoration: none; /* Elimina el subrayado */
     color: #fff; /* Color del texto */
 }
+/* Estilos para el formulario */
+.container {
+    width: 80%; /* Ancho del contenedor del formulario */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espaciado interno del contenedor */
+}
+
+form {
+    background-color: #f2f2f2; /* Color de fondo del formulario */
+    padding: 20px; /* Espaciado interno del formulario */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+label {
+    display: block; /* Hace que las etiquetas ocupen una línea completa */
+    margin-bottom: 10px; /* Añade margen inferior */
+    font-weight: bold; /* Texto en negrita */
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 20px; /* Margen inferior */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde gris */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho */
+}
+
+textarea {
+    height: 100px; /* Altura del área de texto */
+}
+
+input[type="submit"] {
+    background-color: #000; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de tipo puntero */
+    font-weight: bold; /* Texto en negrita */
+}
+
+input[type="submit"]:hover {
+    background-color: #444; /* Color de fondo del botón al pasar el mouse */
+}
+
+/* Estilos para los desplegables */
+select {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 20px; /* Margen inferior */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde gris */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho */
+}
+
+/* Estilos para la opción predeterminada */
+select option:first-child {
+    color: #888; /* Color de texto gris */
+}

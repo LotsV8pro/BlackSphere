@@ -9,7 +9,7 @@
     <!-- Logo telf -->
     <link rel="apple-touch-icon" href="./Blacksphere/Logo/Logo.webp"> <!-- Icono para dispositivos móviles -->
 </head>
-<body>,
+<body>
     <header>
         <h1>BlackSphere</h1> <!-- Título principal de la página -->
         <p>Administración de Servidores de Discord</p> <!-- Subtítulo o descripción -->
@@ -39,12 +39,14 @@
             
             <label for="tipo_servidor">Tipo de Servidor:</label> <!-- Etiqueta para el campo del tipo de servidor -->
             <select id="tipo_servidor" name="tipo_servidor"> <!-- Menú desplegable para seleccionar el tipo de servidor -->
+                <option value="" selected disabled>Selecciona una opción</option> <!-- Opción predeterminada -->
                 <option value="rework">Rework de Servidor</option> <!-- Opción para rework de servidor -->
                 <option value="nuevo">Servidor Nuevo</option> <!-- Opción para servidor nuevo -->
             </select><br><br>
             
             <label for="categoria_servidor">Categoría de Servidor:</label> <!-- Etiqueta para el campo de categoría de servidor -->
             <select id="categoria_servidor" name="categoria_servidor"> <!-- Menú desplegable para seleccionar la categoría de servidor -->
+                <option value="" selected disabled>Selecciona una opción</option> <!-- Opción predeterminada -->
                 <option value="streamer">Servidor para Streamer</option> <!-- Opción para servidor de streamer -->
                 <option value="comunidad">Servidor para Comunidad</option> <!-- Opción para servidor de comunidad -->
                 <option value="otro">Otro</option> <!-- Opción para otro tipo de servidor -->
