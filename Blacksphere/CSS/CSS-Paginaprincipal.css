@@ -1,39 +1,52 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Define la fuente para todo el cuerpo del documento */
     margin: 0;
     padding: 0;
 }
+
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto en el encabezado */
+    padding: 20px 0; /* Espaciado interno del encabezado */
+    text-align: center; /* Alineación del texto en el centro */
 }
+
 #banner {
     width: 100%;
-    height: 300px;
-    overflow: hidden;
+    height: 300px; /* Altura del banner */
+    overflow: hidden; /* Oculta el desbordamiento de contenido */
     position: relative;
 }
-#banner img {
-    width: 100%;
-    height: auto;
-}
+
 .carousel {
-    display: flex;
-    animation: carousel 10s infinite;
+    display: flex; /* Establece el contenedor del carrusel como un contenedor flexible */
+    width: 400%; /* Ajusta el ancho del carrusel para contener todas las imágenes */
+    animation: carousel 20s infinite linear; /* Aplica la animación carousel durante 20 segundos de forma infinita con una transición lineal */
 }
+
+.carousel img {
+    flex: 0 0 auto; /* Hace que el tamaño de las imágenes no sea fijo */
+    width: 100%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto de las imágenes */
+    object-fit: cover; /* Escala las imágenes para que cubran todo el espacio disponible */
+}
+
 @keyframes carousel {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-100%); }
-    50% { transform: translateX(-200%); }
-    75% { transform: translateX(-300%); }
-    100% { transform: translateX(0); }
+    0% { transform: translateX(0%); } /* Inicio de la animación: sin desplazamiento horizontal */
+    10% { transform: translateX(0%); } /* 10% de la animación: sin desplazamiento horizontal */
+    25% { transform: translateX(-100%); } /* 25% de la animación: desplazamiento hacia la izquierda de una imagen */
+    35% { transform: translateX(-100%); } /* 35% de la animación: desplazamiento hacia la izquierda de una imagen */
+    50% { transform: translateX(-200%); } /* 50% de la animación: desplazamiento hacia la izquierda de una imagen */
+    60% { transform: translateX(-200%); } /* 60% de la animación: desplazamiento hacia la izquierda de una imagen */
+    75% { transform: translateX(-300%); } /* 75% de la animación: desplazamiento hacia la izquierda de una imagen */
+    100% { transform: translateX(-300%); } /* 100% de la animación: desplazamiento hacia la izquierda de una imagen */
 }
+
 .content {
     padding: 20px;
     text-align: center;
 }
+
 footer {
     background-color: #333;
     color: #fff;
