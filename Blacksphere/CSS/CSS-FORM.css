@@ -1,27 +1,111 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif; /* Define la fuente para todo el cuerpo del documento */
-    margin: 0; /* Elimina el margen exterior del cuerpo */
-    padding: 0; /* Elimina el relleno del cuerpo */
+    margin: 0;
+    padding: 0;
 }
 
+/* Estilos para el encabezado */
 header {
     background-color: #333; /* Color de fondo del encabezado */
     color: #fff; /* Color del texto en el encabezado */
-    padding: 20px 0; /* Espaciado interno del encabezado (20px arriba y abajo, 0 a los lados) */
+    padding: 20px 0; /* Espaciado interno del encabezado */
     text-align: center; /* Alineación del texto en el centro */
 }
 
+/* Estilos para el formulario */
+.container {
+    width: 80%; /* Ancho del contenedor del formulario */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espaciado interno del contenedor */
+}
+
+form {
+    background-color: #f2f2f2; /* Color de fondo del formulario */
+    padding: 20px; /* Espaciado interno del formulario */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+label {
+    display: block; /* Hace que las etiquetas ocupen una línea completa */
+    margin-bottom: 10px; /* Añade margen inferior */
+    font-weight: bold; /* Texto en negrita */
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 20px; /* Margen inferior */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde gris */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho */
+}
+
+textarea {
+    height: 100px; /* Altura del área de texto */
+}
+
+input[type="submit"] {
+    background-color: #000; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de tipo puntero */
+    font-weight: bold; /* Texto en negrita */
+}
+
+input[type="submit"]:hover {
+    background-color: #444; /* Color de fondo del botón al pasar el mouse */
+}
 .content {
-    padding: 20px; /* Espaciado interno del contenido (20px en todos los lados) */
-    text-align: center; /* Alineación del texto en el centro */
+    padding: 20px;
+    text-align: center;
 }
 
 footer {
-    background-color: #333; /* Color de fondo del pie de página */
-    color: #fff; /* Color del texto en el pie de página */
-    text-align: center; /* Alineación del texto en el centro */
-    padding: 20px 0; /* Espaciado interno del pie de página (20px arriba y abajo, 0 a los lados) */
-    position: fixed; /* Fija el pie de página en la parte inferior de la ventana del navegador */
-    bottom: 0; /* Establece la posición del pie de página en la parte inferior de la ventana */
-    width: 100%; /* Establece el ancho del pie de página al 100% del ancho de la ventana */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* Añade estilos al botón */
+.button {
+    background-color: #000; /* Color de fondo negro */
+    color: #fff; /* Color del texto blanco */
+    text-transform: uppercase; /* Transforma el texto en mayúsculas */
+    padding: 10px 20px; /* Ajusta el relleno del botón */
+    font-size: 16px; /* Tamaño de fuente */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 5px; /* Añade bordes redondeados */
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #333; /* Color de fondo */
+    padding: 10px 0; /* Ajusta el relleno */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+nav ul {
+    list-style-type: none; /* Elimina los puntos de lista */
+    padding: 0; /* Elimina el relleno */
+}
+
+nav ul li {
+    display: inline; /* Muestra los elementos en línea */
+    margin: 0 10px; /* Añade margen horizontal */
+}
+
+nav ul li a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #fff; /* Color del texto */
 }
