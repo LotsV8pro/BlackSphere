@@ -20,14 +20,14 @@ header {
 
 .carousel {
     display: flex; /* Establece el contenedor del carrusel como un contenedor flexible */
-    width: 400%; /* Ajusta el ancho del carrusel para contener todas las imágenes */
+    width: 100%; /* Ajusta el ancho del carrusel para contener todas las imágenes */
     animation: carousel 20s infinite linear; /* Aplica la animación carousel durante 20 segundos de forma infinita con una transición lineal */
 }
 
 .carousel img {
     flex: 0 0 auto; /* Hace que el tamaño de las imágenes no sea fijo */
     width: 100%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
-    height: auto; /* Mantiene la proporción de aspecto de las imágenes */
+    height: 100%; /* Mantiene la proporción de aspecto de las imágenes */
     object-fit: cover; /* Escala las imágenes para que cubran todo el espacio disponible */
 }
 
