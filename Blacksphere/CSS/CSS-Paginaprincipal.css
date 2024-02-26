@@ -56,3 +56,36 @@ footer {
     bottom: 0;
     width: 100%;
 }
+/* Añade estilos al botón */
+.button {
+    background-color: #000; /* Color de fondo negro */
+    color: #fff; /* Color del texto blanco */
+    text-transform: uppercase; /* Transforma el texto en mayúsculas */
+    padding: 10px 20px; /* Ajusta el relleno del botón */
+    font-size: 16px; /* Tamaño de fuente */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 5px; /* Añade bordes redondeados */
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #333; /* Color de fondo */
+    padding: 10px 0; /* Ajusta el relleno */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+nav ul {
+    list-style-type: none; /* Elimina los puntos de lista */
+    padding: 0; /* Elimina el relleno */
+}
+
+nav ul li {
+    display: inline; /* Muestra los elementos en línea */
+    margin: 0 10px; /* Añade margen horizontal */
+}
+
+nav ul li a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #fff; /* Color del texto */
+}
