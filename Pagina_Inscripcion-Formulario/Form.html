@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Solicitud de Servidor</title>
+    <link rel="stylesheet" href="./CSS/CSS.css">
+</head>
+<body>
+    <header>
+        <h1>Formulario de Solicitud de Servidor</h1>
+    </header>
+    <div class="container">
+        <form action="mailto:contact.blacksphere@gmail.com" method="post" enctype="text/plain">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required><br><br>
+            
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required><br><br>
+            
+            <label for="discord">Nombre de Discord:</label>
+            <input type="text" id="discord" name="discord" required><br><br>
+            
+            <label for="tipo_servidor">Tipo de Servidor:</label>
+            <select id="tipo_servidor" name="tipo_servidor">
+                <option value="rework">Rework de Servidor</option>
+                <option value="nuevo">Servidor Nuevo</option>
+            </select><br><br>
+            
+            <label for="categoria_servidor">Categoría de Servidor:</label>
+            <select id="categoria_servidor" name="categoria_servidor">
+                <option value="streamer">Servidor para Streamer</option>
+                <option value="comunidad">Servidor para Comunidad</option>
+                <option value="otro">Otro</option>
+            </select><br><br>
+            
+            <label for="especificaciones">Especificaciones:</label><br>
+            <textarea id="especificaciones" name="especificaciones" rows="4" cols="50"></textarea><br><br>
+            
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>
