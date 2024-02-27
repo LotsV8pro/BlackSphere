@@ -1,22 +1,11 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Añade estilos al botón */
-.button {
-    background-color: #000;
-    color: #fff;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    width: auto;
-}
-
+/* Estilos del encabezado */
 header {
     background-color: #333;
     color: #fff;
@@ -24,6 +13,7 @@ header {
     text-align: center;
 }
 
+/* Estilos de la barra de navegación */
 nav {
     background-color: #333;
     padding: 10px 0;
@@ -45,15 +35,7 @@ nav ul li a {
     color: #fff;
 }
 
-#navbar::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    margin-top: 10px;
-}
-
+/* Estilos del carrusel */
 #banner {
     width: 100%;
     height: 300px;
@@ -85,29 +67,23 @@ nav ul li a {
     100% { transform: translateX(-300%); }
 }
 
+/* Estilos del contenido */
 .content {
     padding: 20px;
     text-align: center;
+    display: flex; /* Utilizando flexbox */
+    justify-content: space-around; /* Espaciado entre las tarjetas */
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Estilos para las tarjetas */
+/* Estilos de las tarjetas */
 .card {
     background-color: #f9f9f9;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
     padding: 20px;
     max-width: 300px;
+    width: 45%; /* Estableciendo el ancho de las tarjetas */
+    margin: 10px; /* Agregando un pequeño margen entre las tarjetas */
 }
 
 .card h2 {
@@ -120,11 +96,32 @@ footer {
     font-size: 16px;
     margin-bottom: 20px;
 }
-.content {
-    display: flex; /* Utilizando flexbox */
-    justify-content: space-around; /* Espaciado entre las tarjetas */
+
+/* Estilos de los botones */
+.button {
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: auto;
 }
-.card {
-    width: 45%; /* Estableciendo el ancho de las tarjetas */
-    margin: 10px; /* Agregando un pequeño margen entre las tarjetas */
-}   
+
+/* Estilos de las imágenes en las tarjetas */
+.card img {
+    margin-bottom: 10px; /* Ajusta el valor del margen según tus preferencias */
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
