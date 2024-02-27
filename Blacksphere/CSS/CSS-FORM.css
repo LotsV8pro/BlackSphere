@@ -1,95 +1,72 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Define la fuente para todo el cuerpo del documento */
     margin: 0;
     padding: 0;
-    overflow: auto;
 }
 
-/* Estilos del encabezado */
+/* Estilos para el encabezado */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto en el encabezado */
+    padding: 20px 0; /* Espaciado interno del encabezado */
+    text-align: center; /* Alineación del texto en el centro */
 }
 
-/* Estilos del carrusel */
-#banner {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    position: relative;
+/* Estilos para el formulario */
+.container {
+    width: 80%; /* Ancho del contenedor del formulario */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espaciado interno del contenedor */
 }
 
-.carousel {
-    display: flex;
-    width: 100%;
-    animation: carousel 20s infinite linear;
+form {
+    background-color: #f2f2f2; /* Color de fondo del formulario */
+    padding: 20px; /* Espaciado interno del formulario */
+    border-radius: 5px; /* Bordes redondeados */
 }
 
-.carousel img {
-    flex: 0 0 auto;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+label {
+    display: block; /* Hace que las etiquetas ocupen una línea completa */
+    margin-bottom: 10px; /* Añade margen inferior */
+    font-weight: bold; /* Texto en negrita */
 }
 
-@keyframes carousel {
-    0% { transform: translateX(0%); }
-    10% { transform: translateX(0%); }
-    25% { transform: translateX(-100%); }
-    35% { transform: translateX(-100%); }
-    50% { transform: translateX(-200%); }
-    60% { transform: translateX(-200%); }
-    75% { transform: translateX(-300%); }
-    100% { transform: translateX(-300%); }
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 20px; /* Margen inferior */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde gris */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho */
 }
 
-/* Estilos del contenido */
+textarea {
+    height: 100px; /* Altura del área de texto */
+}
+
+input[type="submit"] {
+    background-color: #000; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de tipo puntero */
+    font-weight: bold; /* Texto en negrita */
+}
+
+input[type="submit"]:hover {
+    background-color: #444; /* Color de fondo del botón al pasar el mouse */
+}
 .content {
     padding: 20px;
     text-align: center;
-    display: flex;
-    justify-content: space-around;
 }
 
-/* Estilos de las tarjetas */
-.card {
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 300px;
-    width: 45%;
-    margin: 10px;
-}
-
-.card h2 {
-    color: #333;
-    font-size: 24px;
-}
-
-.card p {
-    color: #666;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-/* Estilos de los botones */
-.button {
-    background-color: #000;
-    color: #fff;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    width: auto;
-}
-
-/* Estilos del pie de página */
 footer {
     background-color: #333;
     color: #fff;
@@ -99,70 +76,35 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
-/* Estilos del botón de menú */
-.menu-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 40px;
-    height: 40px;
-    background-image: url("./Imagenes/Logo/BlackSphereLogo.webp");
-    background-size: cover;
-    cursor: pointer;
+/* Añade estilos al botón */
+.button {
+    background-color: #000; /* Color de fondo negro */
+    color: #fff; /* Color del texto blanco */
+    text-transform: uppercase; /* Transforma el texto en mayúsculas */
+    padding: 10px 20px; /* Ajusta el relleno del botón */
+    font-size: 16px; /* Tamaño de fuente */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 5px; /* Añade bordes redondeados */
 }
 
-/* Estilos del menú desplegable */
-.menu {
-    position: fixed;
-    top: 0;
-    left: -300px;
-    width: 300px;
-    height: 100%;
-    background-color: #fff;
-    padding-top: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 2;
-    transition: left 0.3s ease;
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #333; /* Color de fondo */
+    padding: 10px 0; /* Ajusta el relleno */
+    text-align: center; /* Alinea el texto al centro */
 }
 
-.menu a {
-    display: block;
-    color: #333;
-    text-decoration: none;
-    padding: 15px 20px;
-    transition: background-color 0.3s ease;
+nav ul {
+    list-style-type: none; /* Elimina los puntos de lista */
+    padding: 0; /* Elimina el relleno */
 }
 
-.menu a:hover {
-    background-color: #f0f0f0;
+nav ul li {
+    display: inline; /* Muestra los elementos en línea */
+    margin: 0 10px; /* Añade margen horizontal */
 }
 
-/* Estilos del overlay */
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-    cursor: pointer;
-}
-
-.menu-opened .overlay {
-    display: block;
-}
-
-/* Estilos del botón de cerrar en el menú desplegable */
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    background: none;
-    border: none;
-    color: #333;
-    cursor: pointer;
-}
+nav ul li a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #fff; /* Color del texto */

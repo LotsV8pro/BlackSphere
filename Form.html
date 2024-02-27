@@ -1,60 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8"> <!-- Configura la codificación de caracteres del documento -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la escala inicial para dispositivos móviles -->
-    <title>Formulario de Solicitud de Servidor</title> <!-- Título de la página -->
-    <link rel="stylesheet" href="./Blacksphere/CSS/CSS-FORM.css"> <!-- Enlace al archivo CSS externo para estilos del formulario -->
-    <link rel="icon" href="./Imagenes/Logo/BlackSphereLogo.webp" type="image/x-icon"> <!-- Icono de la pestaña del navegador -->
-    <!-- Logo teléfono -->
-    <link rel="apple-touch-icon" href="./Blacksphere/Logo/Logo.webp"> <!-- Icono para dispositivos móviles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackSphere - Formulario de Solicitud de Servidor</title>
+    <link rel="stylesheet" href="./Blacksphere/CSS/CSS-Paginaprincipal.css">
+    <link rel="stylesheet" href="./Blacksphere/CSS/CSS-FORM.css"> <!-- Agrega estilos específicos para el formulario -->
+    <link rel="icon" href="./Imagenes/Logo/BlackSphereLogo.webp" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./Blacksphere/Logo/Logo.webp">
 </head>
 <body>
+    <div id="overlay" class="overlay" onclick="closeMenu()"></div> <!-- Agregado -->
     <header>
-        <!-- Botón de menú -->
-        <img src="./Imagenes/Logo/BlackSphereLogo.webp" alt="Botón de Menú" class="menu-button" onclick="window.location.href='./index.html'">
-        <h1>BlackSphere</h1> <!-- Título principal de la página -->
-        <p>Administración de Servidores de Discord</p> <!-- Subtítulo o descripción -->
+        <h1>Black Sphere</h1>
+        <img src="./Imagenes/Logo/BlackSphereLogo.webp" alt="Botón de menú" class="menu-button" onclick="toggleMenu()">
+        <button class="menu-button" onclick="toggleMenu()"></button> <!-- Botón para abrir el menú desplegable -->
+<div id="menu" class="menu">
+    <button class="close-button" onclick="closeMenu()">X</button> <!-- Botón para cerrar el menú desplegable -->
+    <a href="#" onclick="window.location.href='./index.html'">Pagina principal</a>
+    <a href="#" onclick="window.location.href='./opcion2.html'">Ejemplos servidores</a>
+    <a href="#" onclick="window.location.href='./Form.html'">Contactanos</a>
+</div>
+        </div>
     </header>
+
     <header>
-        <h1>Formulario de Solicitud de Servidor</h1> <!-- Título principal del formulario -->
+        <h1>Formulario de Solicitud de Servidor</h1>
     </header>
+
     <div class="container">
         <form action="https://formspree.io/f/xeqykkkg" method="post">
-            <!-- Formulario de solicitud -->
-            <label for="nombre">Nombre:</label> <!-- Etiqueta para el campo de nombre -->
-            <input type="text" id="nombre" name="nombre" required><br><br> <!-- Campo de entrada para el nombre -->
-            
-            <label for="apellidos">Apellidos:</label> <!-- Etiqueta para el campo de apellidos -->
-            <input type="text" id="apellidos" name="apellidos" required><br><br> <!-- Campo de entrada para los apellidos -->
-            
-            <label for="correo">Correo:</label> <!-- Etiqueta para el campo de correo electrónico -->
-            <input type="email" id="correo" name="correo" required><br><br> <!-- Campo de entrada para el correo electrónico -->
-            
-            <label for="discord">Nombre de Discord:</label> <!-- Etiqueta para el campo del nombre de Discord -->
-            <input type="text" id="discord" name="discord" required><br><br> <!-- Campo de entrada para el nombre de Discord -->
-            
-            <label for="tipo_servidor">Tipo de Servidor:</label> <!-- Etiqueta para el campo del tipo de servidor -->
-            <select id="tipo_servidor" name="tipo_servidor"> <!-- Menú desplegable para seleccionar el tipo de servidor -->
-                <option value="" selected disabled>Selecciona una opción</option> <!-- Opción predeterminada -->
-                <option value="rework">Rework de Servidor</option> <!-- Opción para rework de servidor -->
-                <option value="nuevo">Servidor Nuevo</option> <!-- Opción para servidor nuevo -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required><br><br>
+
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required><br><br>
+
+            <label for="discord">Nombre de Discord:</label>
+            <input type="text" id="discord" name="discord" required><br><br>
+
+            <label for="tipo_servidor">Tipo de Servidor:</label>
+            <select id="tipo_servidor" name="tipo_servidor">
+                <option value="" selected disabled>Selecciona una opción</option>
+                <option value="rework">Rework de Servidor</option>
+                <option value="nuevo">Servidor Nuevo</option>
             </select><br><br>
-            
-            <label for="categoria_servidor">Categoría de Servidor:</label> <!-- Etiqueta para el campo de categoría de servidor -->
-            <select id="categoria_servidor" name="categoria_servidor"> <!-- Menú desplegable para seleccionar la categoría de servidor -->
-                <option value="" selected disabled>Selecciona una opción</option> <!-- Opción predeterminada -->
-                <option value="streamer">Servidor para Streamer</option> <!-- Opción para servidor de streamer -->
-                <option value="comunidad">Servidor para Comunidad</option> <!-- Opción para servidor de comunidad -->
-                <option value="otro">Otro</option> <!-- Opción para otro tipo de servidor -->
+
+            <label for="categoria_servidor">Categoría de Servidor:</label>
+            <select id="categoria_servidor" name="categoria_servidor">
+                <option value="" selected disabled>Selecciona una opción</option>
+                <option value="streamer">Servidor para Streamer</option>
+                <option value="comunidad">Servidor para Comunidad</option>
+                <option value="otro">Otro</option>
             </select><br><br>
-            
-            <label for="especificaciones">Especificaciones:</label><br> <!-- Etiqueta para el campo de especificaciones -->
-            <textarea id="especificaciones" name="especificaciones" rows="4" cols="50"></textarea><br><br> <!-- Área de texto para las especificaciones -->
-            
-            <input type="submit" value="Enviar"> <!-- Botón de envío del formulario -->
-            
+
+            <label for="especificaciones">Especificaciones:</label><br>
+            <textarea id="especificaciones" name="especificaciones" rows="4" cols="50"></textarea><br><br>
+
+            <input type="submit" value="Enviar">
         </form>
     </div>
+
+    <footer>
+        <p>Contacto:</p>
+        <p>Email: contact.blacksphere@gmail.com</p>
+        <p>Twitter: @BlackSphere</p>
+    </footer>
+
+    <script src="./script-desplegabel.js"></script> <!-- Enlace al archivo JavaScript -->
 </body>
 </html>
