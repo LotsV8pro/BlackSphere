@@ -1,45 +1,88 @@
 body {
-    font-family: Arial, sans-serif; /* Define la fuente para todo el cuerpo del documento */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+/* Añade estilos al botón */
+.button {
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: auto;
+}
+
 header {
-    background-color: #333; /* Color de fondo del encabezado */
-    color: #fff; /* Color del texto en el encabezado */
-    padding: 20px 0; /* Espaciado interno del encabezado */
-    text-align: center; /* Alineación del texto en el centro */
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#navbar::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    margin-top: 10px;
 }
 
 #banner {
     width: 100%;
-    height: 300px; /* Altura del banner */
-    overflow: hidden; /* Oculta el desbordamiento de contenido */
+    height: 300px;
+    overflow: hidden;
     position: relative;
 }
 
 .carousel {
-    display: flex; /* Establece el contenedor del carrusel como un contenedor flexible */
-    width: 100%; /* Ajusta el ancho del carrusel para contener todas las imágenes */
-    animation: carousel 20s infinite linear; /* Aplica la animación carousel durante 20 segundos de forma infinita con una transición lineal */
+    display: flex;
+    width: 100%;
+    animation: carousel 20s infinite linear;
 }
 
 .carousel img {
-    flex: 0 0 auto; /* Hace que el tamaño de las imágenes no sea fijo */
-    width: 100%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
-    height: 100%; /* Mantiene la proporción de aspecto de las imágenes */
-    object-fit: cover; /* Escala las imágenes para que cubran todo el espacio disponible */
+    flex: 0 0 auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 @keyframes carousel {
-    0% { transform: translateX(0%); } /* Inicio de la animación: sin desplazamiento horizontal */
-    10% { transform: translateX(0%); } /* 10% de la animación: sin desplazamiento horizontal */
-    25% { transform: translateX(-100%); } /* 25% de la animación: desplazamiento hacia la izquierda de una imagen */
-    35% { transform: translateX(-100%); } /* 35% de la animación: desplazamiento hacia la izquierda de una imagen */
-    50% { transform: translateX(-200%); } /* 50% de la animación: desplazamiento hacia la izquierda de una imagen */
-    60% { transform: translateX(-200%); } /* 60% de la animación: desplazamiento hacia la izquierda de una imagen */
-    75% { transform: translateX(-300%); } /* 75% de la animación: desplazamiento hacia la izquierda de una imagen */
-    100% { transform: translateX(-300%); } /* 100% de la animación: desplazamiento hacia la izquierda de una imagen */
+    0% { transform: translateX(0%); }
+    10% { transform: translateX(0%); }
+    25% { transform: translateX(-100%); }
+    35% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    60% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(-300%); }
 }
 
 .content {
@@ -55,37 +98,4 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-/* Añade estilos al botón */
-.button {
-    background-color: #000; /* Color de fondo negro */
-    color: #fff; /* Color del texto blanco */
-    text-transform: uppercase; /* Transforma el texto en mayúsculas */
-    padding: 10px 20px; /* Ajusta el relleno del botón */
-    font-size: 16px; /* Tamaño de fuente */
-    border: none; /* Sin borde */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    border-radius: 5px; /* Añade bordes redondeados */
-}
-
-/* Estilos para la barra de navegación */
-nav {
-    background-color: #333; /* Color de fondo */
-    padding: 10px 0; /* Ajusta el relleno */
-    text-align: center; /* Alinea el texto al centro */
-}
-
-nav ul {
-    list-style-type: none; /* Elimina los puntos de lista */
-    padding: 0; /* Elimina el relleno */
-}
-
-nav ul li {
-    display: inline; /* Muestra los elementos en línea */
-    margin: 0 10px; /* Añade margen horizontal */
-}
-
-nav ul li a {
-    text-decoration: none; /* Elimina el subrayado */
-    color: #fff; /* Color del texto */
 }
