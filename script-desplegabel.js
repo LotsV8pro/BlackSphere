@@ -7,10 +7,12 @@ function toggleMenu() {
         menu.style.left = "0";
         overlay.style.display = "block"; // Mostrar overlay
         document.body.style.overflow = "hidden"; // Deshabilitar el desplazamiento del cuerpo
+        document.body.classList.add("menu-opened"); // Agregado
     } else {
         menu.style.left = "-300px";
         overlay.style.display = "none"; // Ocultar overlay
         document.body.style.overflow = "auto"; // Habilitar el desplazamiento del cuerpo
+        document.body.classList.remove("menu-opened"); // Agregado
     }
 }
 
@@ -22,4 +24,5 @@ function closeMenu() {
     menu.style.left = "-300px";
     overlay.style.display = "none"; // Ocultar overlay
     document.body.style.overflow = "auto"; // Habilitar el desplazamiento del cuerpo
+    document.body.classList.remove("menu-opened"); // Agregado
 }
