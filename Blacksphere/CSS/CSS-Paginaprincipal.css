@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow: auto;
 }
 
 /* Estilos del encabezado */
@@ -71,8 +72,8 @@ nav ul li a {
 .content {
     padding: 20px;
     text-align: center;
-    display: flex; /* Utilizando flexbox */
-    justify-content: space-around; /* Espaciado entre las tarjetas */
+    display: flex;
+    justify-content: space-around;
 }
 
 /* Estilos de las tarjetas */
@@ -82,9 +83,10 @@ nav ul li a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 300px;
-    width: 45%; /* Estableciendo el ancho de las tarjetas */
-    margin: 10px; /* Agregando un pequeño margen entre las tarjetas */
+    width: 45%;
+    margin: 10px;
 }
+
 .card h2 {
     color: #333;
     font-size: 24px;
@@ -111,7 +113,7 @@ nav ul li a {
 
 /* Estilos de las imágenes en las tarjetas */
 .card img {
-    margin-bottom: 10px; /* Ajusta el valor del margen según tus preferencias */
+    margin-bottom: 10px;
 }
 
 /* Estilos del pie de página */
@@ -124,6 +126,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
 /* Estilos del botón de menú */
 .menu-button {
     position: absolute;
@@ -140,13 +143,13 @@ footer {
 .menu {
     position: fixed;
     top: 0;
-    left: -200px; /* Fuera de la vista por defecto */
-    width: 200px;
+    left: -300px;
+    width: 300px;
     height: 100%;
     background-color: #fff;
     padding-top: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 2; /* Por encima del overlay */
+    z-index: 2;
     transition: left 0.3s ease;
 }
 
@@ -170,6 +173,23 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
-    z-index: 1; /* Por encima de todo, excepto del menú */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.menu-opened .overlay {
+    display: block;
+}
+
+/* Estilos del botón de cerrar en el menú desplegable */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
 }
