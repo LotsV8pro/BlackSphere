@@ -173,3 +173,15 @@ select {
 select option:first-child {
     color: #888; /* Color de texto gris */
 }
+        /* Estilos del botón de menú */
+        .menu-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            background-image: url("./Imagenes/Logo/BlackSphereLogo.webp");
+            background-size: cover;
+            cursor: pointer;
+        }
+        
