@@ -99,3 +99,32 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Estilos para las tarjetas */
+.card {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 300px;
+}
+
+.card h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+.card p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.content {
+    display: flex; /* Utilizando flexbox */
+    justify-content: space-around; /* Espaciado entre las tarjetas */
+}
+.card {
+    width: 45%; /* Estableciendo el ancho de las tarjetas */
+    margin: 10px; /* Agregando un pequeño margen entre las tarjetas */
+}   
