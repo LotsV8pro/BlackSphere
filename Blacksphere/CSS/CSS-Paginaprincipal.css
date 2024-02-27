@@ -135,3 +135,36 @@ footer {
             background-size: cover;
             cursor: pointer;
         }
+/* Estilos del menú desplegable */
+.menu {
+    position: absolute;
+    top: 50px;
+    left: -200px; /* Inicialmente fuera de la vista */
+    width: 200px;
+    background-color: #333;
+    padding: 20px;
+    transition: left 0.3s ease;
+}
+
+.menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.menu a:hover {
+    color: #ffcc00;
+}
+
+/* Estilos del overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    z-index: 1;
+}
