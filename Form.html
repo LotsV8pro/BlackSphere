@@ -10,26 +10,34 @@
     <link rel="apple-touch-icon" href="./Imagenes/Logo/BlackSphereLogo.png">
 </head>
 <body>
-    <div id="overlay" class="overlay" onclick="closeMenu()"></div> <!-- Agregado -->
+    <!-- Overlay para el menú desplegable -->
+    <div id="overlay" class="overlay" onclick="closeMenu()"></div>
+
+    <!-- Encabezado y menú desplegable -->
     <header>
         <h1>Black Sphere</h1>
         <img src="./Imagenes/Logo/BlackSphereLogo.png" alt="Botón de menú" class="menu-button" onclick="toggleMenu()">
         <button class="menu-button" onclick="toggleMenu()"></button> <!-- Botón para abrir el menú desplegable -->
-<div id="menu" class="menu">
-    <button class="close-button" onclick="closeMenu()">X</button> <!-- Botón para cerrar el menú desplegable -->
-    <a href="#" onclick="window.location.href='./index.html'">Pagina principal</a>
-    <a href="#" onclick="window.location.href='./contenido-tarjetas-ejemplos.html'">Ejemplos servidores</a>
-    <a href="#" onclick="window.location.href='./Form.html'">Contactanos</a>
-</div>
+
+        <!-- Menú desplegable -->
+        <div id="menu" class="menu">
+            <button class="close-button" onclick="closeMenu()">X</button> <!-- Botón para cerrar el menú desplegable -->
+            <a href="#" onclick="window.location.href='./index.html'">Pagina principal</a>
+            <a href="#" onclick="window.location.href='./contenido-tarjetas-ejemplos.html'">Ejemplos servidores</a>
+            <a href="#" onclick="window.location.href='./Form.html'">Contactanos</a>
         </div>
     </header>
 
+    <!-- Encabezado específico para el formulario -->
     <header>
         <h1>Formulario de Solicitud de Servidor</h1>
     </header>
 
+    <!-- Contenedor del formulario -->
     <div class="container">
+        <!-- Formulario con acción hacia Formspree -->
         <form action="https://formspree.io/f/xeqykkkg" method="post">
+            <!-- Campos del formulario con etiquetas -->
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required><br><br>
 
@@ -60,16 +68,19 @@
             <label for="especificaciones">Especificaciones:</label><br>
             <textarea id="especificaciones" name="especificaciones" rows="4" cols="50"></textarea><br><br>
 
+            <!-- Botón para enviar el formulario -->
             <input type="submit" value="Enviar">
         </form>
     </div>
 
+    <!-- Pie de página con información de contacto -->
     <footer class="main-footer">
         <p>Contacto:</p>
         <p>Email: contact.blacksphere@gmail.com</p>
         <p>Twitter: @BlackSphere</p>
     </footer>
 
-    <script src="./script-desplegabel.js"></script> <!-- Enlace al archivo JavaScript -->
+    <!-- Enlace al archivo JavaScript para el menú desplegable -->
+    <script src="./script-desplegabel.js"></script>
 </body>
 </html>
