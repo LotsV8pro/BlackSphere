@@ -85,7 +85,6 @@ nav ul li a {
     width: 45%; /* Estableciendo el ancho de las tarjetas */
     margin: 10px; /* Agregando un pequeño margen entre las tarjetas */
 }
-
 .card h2 {
     color: #333;
     font-size: 24px;
