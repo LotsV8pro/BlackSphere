@@ -1,70 +1,107 @@
 /* Estilos generales */
-body {
-    font-family: Arial, sans-serif; /* Define la fuente para todo el cuerpo del documento */
+body, html {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif; /* Agregado para la fuente predeterminada */
 }
 
 /* Estilos para el encabezado */
 header {
-    background-color: #333; /* Color de fondo del encabezado */
-    color: #fff; /* Color del texto en el encabezado */
-    padding: 20px 0; /* Espaciado interno del encabezado */
-    text-align: center; /* Alineación del texto en el centro */
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
 }
 
 /* Estilos para el formulario */
 .container {
-    width: 80%; /* Ancho del contenedor del formulario */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-    padding: 20px; /* Espaciado interno del contenedor */
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 form {
-    background-color: #f2f2f2; /* Color de fondo del formulario */
-    padding: 20px; /* Espaciado interno del formulario */
-    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 175px; /* Ajuste para evitar que el pie de página se superponga */
 }
 
 label {
-    display: block; /* Hace que las etiquetas ocupen una línea completa */
-    margin-bottom: 10px; /* Añade margen inferior */
-    font-weight: bold; /* Texto en negrita */
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 input[type="text"],
 input[type="email"],
 select,
 textarea {
-    width: 100%; /* Ancho completo */
-    padding: 10px; /* Espaciado interno */
-    margin-bottom: 20px; /* Margen inferior */
-    border-radius: 5px; /* Bordes redondeados */
-    border: 1px solid #ccc; /* Borde gris */
-    box-sizing: border-box; /* Incluye el padding y el borde en el ancho */
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 textarea {
-    height: 100px; /* Altura del área de texto */
+    height: 100px;
 }
 
 input[type="submit"] {
-    background-color: #000; /* Color de fondo del botón */
-    color: #fff; /* Color del texto */
-    text-transform: uppercase; /* Texto en mayúsculas */
-    padding: 10px 20px; /* Espaciado interno */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cursor de tipo puntero */
-    font-weight: bold; /* Texto en negrita */
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: auto; /* Cambiado de 'width: 100%;' a 'width: auto;' */
 }
 
 input[type="submit"]:hover {
-    background-color: #444; /* Color de fondo del botón al pasar el mouse */
+    background-color: #444;
 }
+
 .content {
     padding: 20px;
     text-align: center;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    input[type="submit"] {
+        width: 100%; /* Para ocupar el ancho completo en pantallas más pequeñas */
+    }
 }
 
 footer {
@@ -72,39 +109,27 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    box-sizing: border-box;
 }
-/* Añade estilos al botón */
+
+/* Opcional: ajusta el estilo del botón si es necesario */
 .button {
-    background-color: #000; /* Color de fondo negro */
-    color: #fff; /* Color del texto blanco */
-    text-transform: uppercase; /* Transforma el texto en mayúsculas */
-    padding: 10px 20px; /* Ajusta el relleno del botón */
-    font-size: 16px; /* Tamaño de fuente */
-    border: none; /* Sin borde */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    border-radius: 5px; /* Añade bordes redondeados */
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: auto;
 }
 
-/* Estilos para la barra de navegación */
+/* Opcional: ajusta el estilo de la barra de navegación si es necesario */
 nav {
-    background-color: #333; /* Color de fondo */
-    padding: 10px 0; /* Ajusta el relleno */
-    text-align: center; /* Alinea el texto al centro */
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 2; /* Agregado z-index para asegurar que la barra de navegación esté encima */
+    position: relative; /* Cambiado a 'relative' para eliminar el 'sticky' */
 }
-
-nav ul {
-    list-style-type: none; /* Elimina los puntos de lista */
-    padding: 0; /* Elimina el relleno */
-}
-
-nav ul li {
-    display: inline; /* Muestra los elementos en línea */
-    margin: 0 10px; /* Añade margen horizontal */
-}
-
-nav ul li a {
-    text-decoration: none; /* Elimina el subrayado */
-    color: #fff; /* Color del texto */
