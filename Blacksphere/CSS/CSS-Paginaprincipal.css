@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: auto;
+    padding-bottom: 60px; /* Ajusta este valor según la altura de tu footer */
 }
 
 /* Estilos del encabezado */
@@ -12,6 +13,37 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    position: fixed; /* Asegura que el encabezado siempre esté fijo en la parte superior */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Ajuste de margen para el contenido para evitar que se superponga con el encabezado */
+.content {
+    padding: 100px 20px 20px; /* Se añade un padding superior para compensar la altura del encabezado */
+}
+
+/* Estilos del banner */
+#banner {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    opacity: 1; /* Inicialmente visible */
+    transition: opacity 0.5s; /* Transición suave de la opacidad */
+}
+
+/* Cuando el usuario desplaza hacia abajo, el banner se desvanece gradualmente */
+body.scrolled #banner {
+    opacity: 0;
+}
+
+/* Contenedor del contenido que se desplaza */
+.scrollable-content {
+    overflow-y: auto; /* Hace que el contenido sea desplazable verticalmente */
+    max-height: calc(100vh - 100px); /* Altura máxima, menos la altura del encabezado */
+    padding-top: 20px; /* Ajuste de relleno superior para compensar la altura del encabezado */
 }
 
 /* Estilos de la barra de navegación */
@@ -37,13 +69,6 @@ nav ul li a {
 }
 
 /* Estilos del carrusel */
-#banner {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    position: relative;
-}
-
 .carousel {
     display: flex;
     width: 100%;
@@ -69,7 +94,6 @@ nav ul li a {
     100% { transform: translateX(-400%); } /* Quinta imagen */
 }
 
-
 /* Estilos del contenido */
 .content {
     padding: 20px;
@@ -87,12 +111,12 @@ nav ul li a {
     max-width: 300px;
     width: 45%;
     margin: 10px;
-    margin-bottom: 175px;
 }
 
 .card h2 {
     color: #333;
     font-size: 24px;
+    margin-bottom: 10px; /* Añadido para separar el título del contenido */
 }
 
 .card p {
@@ -100,6 +124,14 @@ nav ul li a {
     font-size: 16px;
     margin-bottom: 20px;
 }
+
+/* Estilos de las imágenes en las tarjetas */
+.card img {
+    width: 100%; /* Ajustado para que la imagen ocupe todo el ancho de la tarjeta */
+    border-radius: 5px; /* Añadido para bordes redondeados en la imagen */
+    margin-bottom: 10px;
+}
+
 
 /* Estilos de los botones */
 .button {
@@ -128,6 +160,13 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s; /* Transición suave de la opacidad */
+}
+
+/* Mostrar el footer cuando se desplaza hacia abajo */
+.show-footer {
+    opacity: 1; /* Mostrar el footer */
 }
 
 /* Estilos del botón de menú */
@@ -208,28 +247,24 @@ footer {
     cursor: pointer;
 }
 
-/* Estilos del botón de menú */
-.menu-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-}
-
-.menu-button:hover {
-    opacity: 0.8;
-}
-/* Estilos para el pie de página */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    box-sizing: border-box;
-    margin-top: 200px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transition: bottom 0.3s ease;
 }
+
+
+/* Cuando el usuario desplaza hacia abajo, el footer se despliega gradualmente */
+body.show-footer footer {
+    bottom: 0;
+}
+
 /* Estilos para pantallas más pequeñas */
 @media screen and (max-width: 768px) {
     nav ul li {
@@ -241,5 +276,3 @@ footer {
         width: 100%; /* Para ocupar el ancho completo en pantallas más pequeñas */
     }
 }
-    
-    

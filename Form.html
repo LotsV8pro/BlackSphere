@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlackSphere - Formulario de Solicitud de Servidor</title>
     <link rel="stylesheet" href="./Blacksphere/CSS/CSS-FORM.css"> <!-- Agrega estilos específicos para el formulario -->
-    <link rel="stylesheet" href="./Blacksphere/CSS/CSS-Paginaprincipal.css">
+    <link rel="stylesheet" href="./Blacksphere/CSS/CSS-Paginaprincipal.css"> <!-- Agrega estilos específicos para el formulario -->
     <link rel="icon" href="./Imagenes/Logo/BlackSphereLogo.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="./Imagenes/Logo/BlackSphereLogo.png">
 </head>
@@ -28,13 +28,11 @@
         </div>
     </header>
 
-    <!-- Encabezado específico para el formulario -->
-    <header>
-        <h1>Formulario de Solicitud de Servidor</h1>
-    </header>
-
     <!-- Contenedor del formulario -->
     <div class="container">
+        <!-- Encabezado específico para el formulario -->
+        <h1>Formulario de Solicitud de Servidor</h1>
+
         <!-- Formulario con acción hacia Formspree -->
         <form action="https://formspree.io/f/xeqykkkg" method="post">
             <!-- Campos del formulario con etiquetas -->
@@ -74,7 +72,7 @@
     </div>
 
     <!-- Pie de página con información de contacto -->
-    <footer class="main-footer">
+    <footer class="main-footer" id="footer">
         <p>Contacto:</p>
         <p>Email: contact.blacksphere@gmail.com</p>
         <p>Twitter: @BlackSphere</p>
@@ -82,5 +80,7 @@
 
     <!-- Enlace al archivo JavaScript para el menú desplegable -->
     <script src="./script-desplegabel.js"></script>
+    <!-- Script para controlar la visibilidad del footer -->
+    <script src="./script-fotter.js"></script>
 </body>
 </html>
