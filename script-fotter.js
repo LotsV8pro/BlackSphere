@@ -1,19 +1,23 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var isScrollable = document.body.scrollHeight > window.innerHeight;
+    function adjustFooter() {
+        var footer = document.querySelector('footer');
+        var isScrollable = document.body.scrollHeight > window.innerHeight;
 
-    if (isScrollable) {
-        window.addEventListener('scroll', function() {
-            var footer = document.querySelector('footer');
+        if (isScrollable) {
             var scrollPosition = window.scrollY;
 
-            if (scrollPosition > 100) { // Cambia este valor según sea necesario
+            if (scrollPosition > 100) {
                 footer.classList.add('show-footer');
             } else {
                 footer.classList.remove('show-footer');
             }
-        });
-    } else {
-        var footer = document.querySelector('footer');
-        footer.classList.add('show-footer');
+        } else {
+            footer.classList.add('show-footer');
+        }
     }
+
+    adjustFooter(); // Llamar a la función para ajustar el footer cuando se carga la página
+
+    window.addEventListener('scroll', adjustFooter);
+    window.addEventListener('resize', adjustFooter);
 });
