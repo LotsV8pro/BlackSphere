@@ -87,6 +87,7 @@ nav ul li a {
     max-width: 300px;
     width: 45%;
     margin: 10px;
+    margin-bottom: 175px;
 }
 
 .card h2 {
@@ -220,3 +221,25 @@ footer {
 .menu-button:hover {
     opacity: 0.8;
 }
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+    margin-top: 200px;
+}
+/* Estilos para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    input[type="submit"] {
+        width: 100%; /* Para ocupar el ancho completo en pantallas más pequeñas */
+    }
+}
+    
+    
