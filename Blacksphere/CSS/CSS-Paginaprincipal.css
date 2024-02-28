@@ -159,12 +159,11 @@ footer {
     transition: bottom 0.5s ease, opacity 0.5s ease; /* Transiciones suaves */
 }
 
-/* Mostrar el footer cuando se desplaza hacia abajo */
+/* Mostrar el footer cuando la página se carga */
 .show-footer {
     bottom: 0; /* Muestra el footer */
     opacity: 1; /* Hace que el footer sea visible */
 }
-
 /* Estilos del botón de menú */
 .menu-button {
     position: absolute;
