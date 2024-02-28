@@ -132,7 +132,6 @@ nav ul li a {
     margin-bottom: 10px;
 }
 
-
 /* Estilos de los botones */
 .button {
     background-color: #000;
@@ -146,11 +145,6 @@ nav ul li a {
     width: auto;
 }
 
-/* Estilos de las imágenes en las tarjetas */
-.card img {
-    margin-bottom: 10px;
-}
-
 /* Estilos del pie de página */
 footer {
     background-color: #333;
@@ -158,15 +152,17 @@ footer {
     text-align: center;
     padding: 20px 0;
     position: fixed;
-    bottom: 0;
+    bottom: -100px; /* Inicialmente, el footer estará fuera de la vista */
+    left: 0;
     width: 100%;
-    opacity: 0;
-    transition: opacity 0.5s; /* Transición suave de la opacidad */
+    opacity: 0; /* Inicialmente, el footer estará oculto */
+    transition: bottom 0.5s ease, opacity 0.5s ease; /* Transiciones suaves */
 }
 
 /* Mostrar el footer cuando se desplaza hacia abajo */
 .show-footer {
-    opacity: 1; /* Mostrar el footer */
+    bottom: 0; /* Muestra el footer */
+    opacity: 1; /* Hace que el footer sea visible */
 }
 
 /* Estilos del botón de menú */
@@ -245,24 +241,6 @@ footer {
     border: none;
     color: #333;
     cursor: pointer;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    transition: bottom 0.3s ease;
-}
-
-
-/* Cuando el usuario desplaza hacia abajo, el footer se despliega gradualmente */
-body.show-footer footer {
-    bottom: 0;
 }
 
 /* Estilos para pantallas más pequeñas */
