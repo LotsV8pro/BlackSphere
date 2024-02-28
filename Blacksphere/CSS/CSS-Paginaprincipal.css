@@ -59,14 +59,16 @@ nav ul li a {
 
 @keyframes carousel {
     0% { transform: translateX(0%); }
-    10% { transform: translateX(0%); }
+    16.666% { transform: translateX(0%); } /* Primer imagen */
     25% { transform: translateX(-100%); }
-    35% { transform: translateX(-100%); }
+    41.666% { transform: translateX(-100%); } /* Segunda imagen */
     50% { transform: translateX(-200%); }
-    60% { transform: translateX(-200%); }
+    66.666% { transform: translateX(-200%); } /* Tercera imagen */
     75% { transform: translateX(-300%); }
-    100% { transform: translateX(-300%); }
+    91.666% { transform: translateX(-300%); } /* Cuarta imagen */
+    100% { transform: translateX(-400%); } /* Quinta imagen */
 }
+
 
 /* Estilos del contenido */
 .content {
