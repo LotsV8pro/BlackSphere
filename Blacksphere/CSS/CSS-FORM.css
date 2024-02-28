@@ -5,12 +5,25 @@ body, html {
     font-family: Arial, sans-serif; /* Fuente predeterminada */
 }
 
-/* Estilos para el encabezado */
+/* Estilos del encabezado */
 header {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    position: static; /* Asegura que el encabezado siempre esté fijo en la parte superior */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    height: 80px; /* Ajusta este valor según la altura de tu encabezado */
+}
+
+/* Ajuste de margen para el contenido para evitar que se superponga con el encabezado */
+.content {
+    padding: 150px 20px 20px; /* Se aumenta el padding superior para dejar espacio para el encabezado */
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* Estilos para la barra de navegación */
@@ -39,16 +52,25 @@ nav ul li a {
 
 /* Estilos para el formulario */
 .container {
-    width: 80%;
-    margin: 0 auto;
+    width: 90%;
+    margin: 90px auto 0;
     padding: 20px;
+    position: relative;
+    border-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
 }
 
 form {
     background-color: #f2f2f2;
     padding: 20px;
     border-radius: 5px;
-    margin-bottom: 175px; /* Ajuste para evitar que el pie de página se superponga */
+    margin-bottom: 175px;
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 label {
@@ -89,11 +111,6 @@ input[type="submit"]:hover {
     background-color: #444;
 }
 
-.content {
-    padding: 20px;
-    text-align: center;
-}
-
 /* Estilos para pantallas más pequeñas */
 @media screen and (max-width: 768px) {
     nav ul li {
@@ -126,4 +143,9 @@ footer {
     cursor: pointer;
     border-radius: 5px;
     width: auto;
+}
+
+/* Additional styles specific to the second CSS block */
+.header {
+    color: #fff;
 }

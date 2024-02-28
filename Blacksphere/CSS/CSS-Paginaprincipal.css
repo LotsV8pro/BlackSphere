@@ -13,15 +13,27 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    position: fixed; /* Asegura que el encabezado siempre esté fijo en la parte superior */
+    position: static; /* Asegura que el encabezado siempre esté fijo en la parte superior */
     top: 0;
     width: 100%;
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    height: 80px; /* Ajusta este valor según la altura de tu encabezado */
 }
 
 /* Ajuste de margen para el contenido para evitar que se superponga con el encabezado */
 .content {
-    padding: 100px 20px 20px; /* Se añade un padding superior para compensar la altura del encabezado */
+    padding: 150px 20px 20px; /* Se aumenta el padding superior para dejar espacio para el encabezado */
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+* Ajuste de margen para el contenido para evitar que se superponga con el encabezado */
+.content {
+    padding: 150px 20px 20px; /* Se aumenta el padding superior para dejar espacio para el encabezado */
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* Estilos del banner */
@@ -73,6 +85,7 @@ nav ul li a {
     display: flex;
     width: 100%;
     animation: carousel 20s infinite linear;
+    z-index: 1;
 }
 
 .carousel img {
@@ -96,7 +109,7 @@ nav ul li a {
 
 /* Estilos del contenido */
 .content {
-    padding: 20px;
+    padding: 150px 20px 20px; /* Se aumenta el padding superior para dejar espacio para el encabezado */
     text-align: center;
     display: flex;
     justify-content: space-around;
@@ -164,6 +177,7 @@ footer {
     bottom: 0; /* Muestra el footer */
     opacity: 1; /* Hace que el footer sea visible */
 }
+
 /* Estilos del botón de menú */
 .menu-button {
     position: absolute;
@@ -251,5 +265,18 @@ footer {
 
     input[type="submit"] {
         width: 100%; /* Para ocupar el ancho completo en pantallas más pequeñas */
+    }
+
+    /* Estilos para el formulario */
+    .container {
+        width: 100%; /* Ajuste para ocupar el ancho completo */
+        margin: 0; /* Elimina el margen superior */
+        padding: 20px;
+        position: relative; /* Se añade para permitir el posicionamiento absoluto de h1 */
+    }
+
+    h1 {
+        position: static; /* Se ajusta para que el h1 siga el flujo normal del documento */
+        margin-top: 20px; /* Se añade un margen superior para separación */
     }
 }
