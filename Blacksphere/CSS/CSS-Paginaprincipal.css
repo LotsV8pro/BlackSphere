@@ -26,14 +26,7 @@ header {
     text-align: center;
     display: flex;
     justify-content: space-around;
-}
-
-* Ajuste de margen para el contenido para evitar que se superponga con el encabezado */
-.content {
-    padding: 150px 20px 20px; /* Se aumenta el padding superior para dejar espacio para el encabezado */
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
+    padding-top: 100px; /* Ajusta el espacio superior para evitar que el encabezado se superponga */
 }
 
 /* Estilos del banner */
@@ -58,26 +51,24 @@ body.scrolled #banner {
     padding-top: 20px; /* Ajuste de relleno superior para compensar la altura del encabezado */
 }
 
-/* Estilos de la barra de navegación */
-nav {
-    background-color: #333;
-    padding: 10px 0;
-    text-align: center;
-}
+/* Estilos de las tarjetas en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Cambia la dirección de flexión a columna */
+        align-items: center; /* Centra las tarjetas horizontalmente */
+        padding-top: 100px; /* Ajusta el espacio superior para evitar que el encabezado se superponga */
+    }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
+    .card {
+        width: 90%; /* Ajusta el ancho de las tarjetas */
+        margin: 10px auto; /* Centra las tarjetas verticalmente */
+        margin-top: 20px; /* Reducir el margen superior de las tarjetas */
+    }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
+    footer {
+        position: static; /* Cambiar a posición estática para que el pie de página flote en la parte inferior */
+        margin-top: 20px; /* Añadir espacio superior para evitar que el pie de página se superponga */
+    }
 }
 
 /* Estilos del carrusel */
@@ -255,28 +246,10 @@ footer {
     color: #333;
     cursor: pointer;
 }
-
-/* Estilos para pantallas más pequeñas */
+/* Estilos específicos para dispositivos móviles */
 @media screen and (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    input[type="submit"] {
-        width: 100%; /* Para ocupar el ancho completo en pantallas más pequeñas */
-    }
-
-    /* Estilos para el formulario */
-    .container {
-        width: 100%; /* Ajuste para ocupar el ancho completo */
-        margin: 0; /* Elimina el margen superior */
-        padding: 20px;
-        position: relative; /* Se añade para permitir el posicionamiento absoluto de h1 */
-    }
-
-    h1 {
-        position: static; /* Se ajusta para que el h1 siga el flujo normal del documento */
-        margin-top: 20px; /* Se añade un margen superior para separación */
+    /* Estilos que se aplicarán solo a dispositivos móviles */
+    body.mobile .content {
+        padding-top: 100px; /* Por ejemplo, ajuste específico del contenido para dispositivos móviles */
     }
 }
