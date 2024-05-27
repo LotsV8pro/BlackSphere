@@ -115,6 +115,7 @@ body.scrolled #banner {
     max-width: 300px;
     width: 45%;
     margin: 10px;
+    margin-bottom: 100px;
 }
 
 .card h2 {
@@ -172,7 +173,7 @@ footer {
 /* Estilos del botón de menú */
 .menu-button {
     position: absolute;
-    top: 20px;
+    top: 40px;
     left: 20px;
     width: 40px;
     height: 40px;
