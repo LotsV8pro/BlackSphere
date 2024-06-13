@@ -138,7 +138,7 @@ body.scrolled #banner {
 }
 
 /* Estilos de los botones */
-.button {
+.button{
     background-color: #000;
     color: #fff;
     text-transform: uppercase;
@@ -148,6 +148,12 @@ body.scrolled #banner {
     cursor: pointer;
     border-radius: 5px;
     width: auto;
+    transition: 0.5s;
+}
+
+.button:hover {
+    padding: 12px 24px;
+    transition: 0.5s;
 }
 
 /* Estilos del pie de página */
